@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .header, .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .footer {
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <h1>Atividades Target Sistemas</h1>
+</div>
+
+<!-- Questão 1: Fibonacci -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title">Questão 1</h4>
+                    <h5 class="card-subtitle">Pertence à sequência Fibonacci?</h5>
+                    <p class="card-text text-justify">
+                        Dada a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor 
+                        sempre será a soma dos dois valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), 
+                        escreva um programa que, informado um número, verifique se ele pertence à sequência.
+                    </p>
+                    <input class="form-control" type="number" id="numero" placeholder="Digite o seu número aqui" min="1"><br/>
+                    <button class="btn btn-primary" onclick="verificarFibonacci()">Verificar</button>
+                    <button class="btn btn-warning text-light" onclick="limparCampoNumero()">Limpar</button>
+                    <p id="resultado_fibonacci"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Questão 2: Verificar letra "a" -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title">Questão 2</h4>
+                    <h5 class="card-subtitle">O texto informado contém a letra 'a' ou 'A'?</h5>
+                    <p class="card-text text-justify">
+                        Escreva um programa que verifique, em uma string, a existência da letra "a", 
+                        seja maiúscula ou minúscula, além de informar a quantidade de vezes em que ela ocorre.
+                    </p>
+                    <input class="form-control" type="text" id="texto" placeholder="Digite seu texto aqui"><br/>
+                    <button class="btn btn-primary" onclick="contarLetrasA()">Contar</button>
+                    <button class="btn btn-warning text-light" onclick="limparCampoString()">Limpar</button>
+                    <p id="resultado_string"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Questão 3: Soma -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title">Questão 3</h4>
+                    <h5 class="card-subtitle">Soma</h5>
+                    <p class="card-text text-justify">
+                        Observe o trecho de código abaixo:<br/> 
+                        int INDICE = 12, SOMA = 0, K = 1; enquanto K &lt; INDICE faça { K = K + 1; SOMA = SOMA + K; } imprimir(SOMA);<br/>
+                        Ao final do processamento, qual será o valor da variável SOMA?
+                    </p>
+                    <button class="btn btn-primary" onclick="calcularSoma(12)">Somar</button>
+                    <button class="btn btn-warning text-light" onclick="limparCampoInfSoma()">Limpar</button>
+                    <p id="resultado_soma"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Questão 4: Lógica -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title">Questão 4</h4>
+                    <p class="card-text text-justify">
+                        Descubra a lógica e complete o próximo elemento:
+                    </p>
+                    <ol>
+                        <li>1, 3, 5, 7, <b>9</b></li>
+                        <li>2, 4, 8, 16, 32, 64, <b>128</b></li>
+                        <li>0, 1, 4, 9, 16, 25, 36, <b>49</b> </li>
+                        <li>4, 16, 36, 64, <b>100</b></li>
+                        <li>1, 1, 2, 3, 5, 8, <b>13</b></li>
+                        <li>2, 10, 12, 16, 17, 18, 19, <b>20</b></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Questão 5: Lâmpada e interruptores -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title">Questão 5</h4>
+                    <h5 class="card-subtitle">Lâmpada e interruptores</h5>
+                    <p class="card-text">
+                        <p class="text-justify">
+                            Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em salas diferentes. 
+                            Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes quiser. 
+                            Seu objetivo é descobrir qual interruptor controla qual lâmpada, fazendo apenas duas idas às salas.
+                        </p>  
+                        <p class="text-justify"><b>Resolução:</b></p>
+                <p class="text-justify"><b>Passo 1:</b> Selecione qualquer um dos três interruptores e ligue-o. 
+                Aguarde por alguns minutos (o suficiente para que a lâmpada correspondente aqueça) e desligue o interruptor.</p>
+                <p class="text-justify"><b>Passo 2:</b> Em seguida, ligue qualquer um dos outros dois interruptores restantes e vá até a sala. </p>
+      
+                <p class="text-justify"><b>Lâmpada apagada e quente:</b> corresponde ao interruptor do Passo 1.</p>      
+                <p class="text-justify"><b>Lâmpada acessa e fria:</b> corresponde ao interruptor do Passo 2.</p>
+                <p class="text-justify"><b>Lâmpada apagada e fria:</b> corresponde ao interruptor que não foi ligado.</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p class="text-center">Rebeca Souza - 2024</p>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+// Função para verificar se pertence à sequência de Fibonacci
+function verificarFibonacci() {
+    const numero = parseInt(document.getElementById('numero').value);
+    let a = 0, b = 1, temp;
+    while (b < numero) {
+        temp = b;
+        b = a + b;
+        a = temp;
+    }
+    const resultado = (b === numero || numero === 0) ? `${numero} pertence à sequência de Fibonacci!` : `${numero} não pertence à sequência de Fibonacci.`;
+    document.getElementById('resultado_fibonacci').textContent = resultado;
+}
+
+// Função para contar letras 'a'
+function contarLetrasA() {
+    const texto = document.getElementById('texto').value;
+    const contagem = (texto.match(/a/gi) || []).length;
+    document.getElementById('resultado_string').textContent = `A letra 'a' aparece ${contagem} vezes.`;
+}
+
+// Função para calcular a soma conforme o código dado
+function calcularSoma(indice) {
+    let soma = 0;
+    let k = 1;
+    while (k < indice) {
+        k = k + 1;
+        soma = soma + k;
+    }
+    document.getElementById('resultado_soma').textContent = 'O valor final da SOMA é: ' + soma + '.';
+}
+
+// Funções para limpar os campos
+function limparCampoNumero() {
+    document.getElementById('numero').value = '';
+    document.getElementById('resultado_fibonacci').textContent = '';
+}
+
+function limparCampoString() {
+    document.getElementById('texto').value = '';
+    document.getElementById('resultado_string').textContent = '';
+}
+
+function limparCampoInfSoma() {
+    document.getElementById('resultado_soma').textContent = '';
+}
+</script>
+
+</body>
+</html>
