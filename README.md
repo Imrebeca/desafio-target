@@ -1,6 +1,6 @@
 # Atividades Target Sistemas
 
-Este repositório contém um projeto de atividades que inclui problemas de lógica e programação. É uma ferramenta educativa que permite ao usuário interagir com diferentes problemas, como a sequência de Fibonacci, contagem de letras e soma.
+ OLÁ RECRUTADOR! 🤗 Este repositório contém o projeto de atividades que inclui a resolução das 5 questões para a vaga de Estágio na Target Sistemas!
 
 ## Descrição do Projeto
 
